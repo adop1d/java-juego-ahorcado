@@ -7,7 +7,7 @@ juego básico, usted escriba en su consola, ¡tienes 20 intentos! :D
 
 basic game, just write on your console, you have 20 attempts! :D
 
-##Herramientas de codigo/code tools: 
+Herramientas de codigo/code tools: 
 
 1. Scanner
 2. Primitives
