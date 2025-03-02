@@ -11,8 +11,8 @@ public class hanged {
 		System.out.println("¡Ahorcado!");
 		System.out.println("Guess the word, good luck!");
 		//añado los atributos que se usaran en el codigo
-		String secretWord = "sinceridad";
-		int maxAttempts = 20;
+		String secretWord = "murcielago";
+		int maxAttempts = 7;
 		int attempts = 0;
 		boolean wordFound = false;
 
@@ -25,12 +25,11 @@ public class hanged {
 		}
 		//bucle informativo para que el usuario introduzca letras
 		while (!wordFound && attempts < maxAttempts) {
-			System.out.println("Found letters: " + String.valueOf(foundLetters));
-			System.out.println("Introduce a letter: ");
+			System.out.println("Letters found: " + String.valueOf(foundLetters));
+			System.out.println("Enter a letter: ");
 			//leo la letra introducida por el usuario
 			char letter = Character.toLowerCase(scanner.next().charAt(0));
 			boolean foundWord = false;
-			//bucle para comprobar si la letra introducida esta en la palabra secreta
 			for (int i = 0; i < secretWord.length(); i++) {
 				//Estructura condicional para comprobar si la letra introducida esta en la palabra secreta
 				if (secretWord.charAt(i) == letter) {
@@ -44,12 +43,13 @@ public class hanged {
 				System.out.println("Letter not found, you have " + (maxAttempts - attempts) + " attempts left.");
 			} else if(String.valueOf(foundLetters).equals(secretWord)) {
 				wordFound = true;
-				System.out.println("Congratulations, you found the word! The word was: " + secretWord);
+				System.out.println("Letters found: " + String.valueOf(foundLetters));
+				System.out.println("Congratulations, you found the word! the word is: " + secretWord);
 			}
 		}
 		//Estructura condicional para comprobar si el usuario ha agotado los intentos
 		if (attempts == maxAttempts) {
-			System.out.println("You have run out of attempts, the word was: " + secretWord);
+			System.out.println("You have run out of attempts! The word was: " + secretWord);
 		}
 		//cierro el scanner para evitar problemas de memoria
 		scanner.close();
